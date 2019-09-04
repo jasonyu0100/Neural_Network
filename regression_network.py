@@ -27,8 +27,8 @@ nn = Network([Layer(2,'leaky_relu',input_size=2),
 #   for j in range(1,5):
 #     print(i,j,(nn.output_function([i,j])))
 
-# nn.export_network('test2.txt')
+# nn.export_network('regression.txt')
 
-nn2 = Network.import_network('test2.txt','regression')
+nn2 = Network.import_network('regression.txt','regression')
 for i in range(1,20):
   print(i,i,(nn2.output_function([i,i])))
